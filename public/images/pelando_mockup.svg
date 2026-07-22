@@ -1,0 +1,74 @@
+<svg width="320" height="640" viewBox="0 0 320 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Phone body bezel -->
+  <rect x="10" y="10" width="300" height="620" rx="36" fill="#09090B" stroke="#2A2A35" stroke-width="4"/>
+  <!-- Phone Screen -->
+  <rect x="18" y="18" width="284" height="604" rx="28" fill="#F8F8FA"/>
+  
+  <!-- Dynamic Island / Notch -->
+  <rect x="100" y="26" width="120" height="24" rx="12" fill="#000000"/>
+
+  <!-- App Header (Orange Pelando Brand) -->
+  <path d="M18 46 C18 46, 18 100, 18 100 H 302 V 46 Z" fill="#FF6000"/>
+  <!-- Logo text -->
+  <text x="36" y="80" font-family="Outfit, sans-serif" font-weight="900" font-size="22" fill="#FFFFFF">pelando</text>
+  
+  <!-- Notification dot -->
+  <circle cx="266" cy="74" r="5" fill="#FFFFFF"/>
+  <circle cx="266" cy="74" r="3" fill="#FF6000"/>
+
+  <!-- Search Bar -->
+  <rect x="32" y="112" width="256" height="36" rx="10" fill="#FFFFFF" stroke="#E2E2E9" stroke-width="1"/>
+  <text x="48" y="134" font-family="Inter, sans-serif" font-size="12" fill="#7D7D90">Buscar promoções...</text>
+
+  <!-- Promotions Category Row -->
+  <rect x="32" y="164" width="54" height="24" rx="12" fill="#FFEFE5"/>
+  <text x="43" y="180" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#FF6000">Quentes</text>
+
+  <rect x="94" y="164" width="54" height="24" rx="12" fill="#F1F1F5"/>
+  <text x="107" y="180" font-family="Inter, sans-serif" font-size="10" fill="#7D7D90">Games</text>
+
+  <rect x="156" y="164" width="54" height="24" rx="12" fill="#F1F1F5"/>
+  <text x="167" y="180" font-family="Inter, sans-serif" font-size="10" fill="#7D7D90">Moda</text>
+
+  <!-- Promo Card 1 -->
+  <rect x="32" y="204" width="256" height="110" rx="14" fill="#FFFFFF" stroke="#E2E2E9" stroke-width="1"/>
+  <!-- Image placeholder -->
+  <rect x="44" y="216" width="60" height="60" rx="8" fill="#F1F1F5"/>
+  <!-- Brand logo indicator inside image -->
+  <rect x="62" y="234" width="24" height="24" rx="12" fill="#FF6000" fill-opacity="0.1"/>
+  
+  <!-- Text in Card 1 -->
+  <text x="116" y="232" font-family="Inter, sans-serif" font-weight="700" font-size="12" fill="#121218">Console PlayStation 5 Slim</text>
+  <text x="116" y="250" font-family="Inter, sans-serif" font-size="10" fill="#7D7D90">Amazon.com.br</text>
+  <text x="116" y="274" font-family="Outfit, sans-serif" font-weight="700" font-size="14" fill="#3DDC84">R$ 3.499,00</text>
+  
+  <!-- Heat rating badge -->
+  <rect x="44" y="284" width="50" height="18" rx="9" fill="#FF6000"/>
+  <text x="56" y="297" font-family="Inter, sans-serif" font-weight="700" font-size="9" fill="#FFFFFF">320°</text>
+
+  <!-- Promo Card 2 -->
+  <rect x="32" y="328" width="256" height="110" rx="14" fill="#FFFFFF" stroke="#E2E2E9" stroke-width="1"/>
+  <!-- Image placeholder -->
+  <rect x="44" y="340" width="60" height="60" rx="8" fill="#F1F1F5"/>
+  <!-- Text in Card 2 -->
+  <text x="116" y="356" font-family="Inter, sans-serif" font-weight="700" font-size="12" fill="#121218">Smart TV 55" 4K Crystal</text>
+  <text x="116" y="374" font-family="Inter, sans-serif" font-size="10" fill="#7D7D90">Magazine Luiza</text>
+  <text x="116" y="398" font-family="Outfit, sans-serif" font-weight="700" font-size="14" fill="#3DDC84">R$ 2.199,00</text>
+
+  <!-- Heat rating badge 2 -->
+  <rect x="44" y="408" width="50" height="18" rx="9" fill="#FF8C39"/>
+  <text x="56" y="421" font-family="Inter, sans-serif" font-weight="700" font-size="9" fill="#FFFFFF">145°</text>
+
+  <!-- Custom App Rating overlay representing reviews redesign -->
+  <rect x="44" y="456" width="232" height="112" rx="16" fill="#121218" fill-opacity="0.95"/>
+  <text x="60" y="482" font-family="Outfit, sans-serif" font-weight="800" font-size="14" fill="#FFFFFF">App Store Rating</text>
+  
+  <text x="60" y="524" font-family="Outfit, sans-serif" font-weight="900" font-size="36" fill="#7C5CFF">4.7</text>
+  <!-- Stars -->
+  <text x="130" y="504" font-family="Inter, sans-serif" font-size="12" fill="#FFBD2E">★★★★★</text>
+  <text x="130" y="524" font-family="Inter, sans-serif" font-size="10" fill="#7D7D90">84k avaliações</text>
+  
+  <!-- Growth indicator line -->
+  <path d="M 60,544 Q 120,540 180,510 T 260,490" fill="none" stroke="#3DDC84" stroke-width="2" stroke-dasharray="3 3"/>
+  <text x="210" y="534" font-family="Inter, sans-serif" font-size="8" fill="#3DDC84">+261% rating</text>
+</svg>
