@@ -7,16 +7,16 @@ import Lenis from 'lenis'
 const { locale, t } = useI18n()
 
 useSeoMeta({
-  title: () => t('seo.title'),
-  description: () => t('seo.description'),
-  ogTitle: () => t('seo.title'),
-  ogDescription: () => t('seo.description'),
+  title: t('seo.title'),
+  description: t('seo.description'),
+  ogTitle: t('seo.title'),
+  ogDescription: t('seo.description'),
   ogImage: '/images/og-share.jpg',
   ogType: 'website',
   ogUrl: 'https://amano.solutions/',
   twitterCard: 'summary_large_image',
-  twitterTitle: () => t('seo.title'),
-  twitterDescription: () => t('seo.description'),
+  twitterTitle: t('seo.title'),
+  twitterDescription: t('seo.description'),
   twitterImage: '/images/og-share.jpg',
 }) 
 
