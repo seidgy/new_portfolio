@@ -4,7 +4,21 @@ import { useI18n } from 'vue-i18n'
 import { playSound } from '../utils/sound'
 import Lenis from 'lenis'
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
+
+useSeoMeta({
+  title: () => t('seo.title'),
+  description: () => t('seo.description'),
+  ogTitle: () => t('seo.title'),
+  ogDescription: () => t('seo.description'),
+  ogImage: '/images/og-share.jpg',
+  ogType: 'website',
+  ogUrl: 'https://amano.solutions/',
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => t('seo.title'),
+  twitterDescription: () => t('seo.description'),
+  twitterImage: '/images/og-share.jpg',
+}) 
 
 interface ParallaxItem {
   el: HTMLElement
@@ -671,22 +685,22 @@ onUnmounted(() => {
 // Spans for asymmetrical columns
 .project-span-8 {
   grid-column: span 8;
-  @include respond-to(mobile) { grid-column: span 12; }
+  @include respond-to(mobile) { grid-column: span 1; }
 }
 
 .project-span-7 {
   grid-column: span 7;
-  @include respond-to(mobile) { grid-column: span 12; }
+  @include respond-to(mobile) { grid-column: span 1; }
 }
 
 .project-span-6 {
   grid-column: span 6;
-  @include respond-to(mobile) { grid-column: span 12; }
+  @include respond-to(mobile) { grid-column: span 1; }
 }
 
 .project-span-5 {
   grid-column: span 5;
-  @include respond-to(mobile) { grid-column: span 12; }
+  @include respond-to(mobile) { grid-column: span 1; }
 }
 
 // Alignments for variable offsets

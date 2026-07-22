@@ -14,6 +14,10 @@ export default defineI18nConfig(() => ({
       millions: 'MILHÕES',
       latam: 'LATAM & N. AMÉRICA',
       allRightsReserved: 'Todos os direitos reservados.',
+      seo: {
+        title: 'Seidgy Amano | Consultor de Produto & Engenheiro de UX',
+        description: 'Consultor de produto combinando pensamento sistêmico com execução detalhada em design, pesquisa de UX, estratégia e engenharia para construir produtos digitais de alto impacto.'
+      },
       languages: {
         'pt': 'PT',
         'en': 'EN'
@@ -176,6 +180,10 @@ export default defineI18nConfig(() => ({
       millions: 'MILLIONS',
       latam: 'LATAM & N. AMERICA',
       allRightsReserved: 'All rights reserved.',
+      seo: {
+        title: 'Seidgy Amano | Product Consultant & UX Engineer',
+        description: 'Product Consultant combining systems-thinking with deep craft in design, UX research, strategy, and engineering to build high-impact digital products.'
+      },
       languages: {
         'pt': 'PT',
         'en': 'EN'
