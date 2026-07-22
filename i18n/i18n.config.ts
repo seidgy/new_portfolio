@@ -12,7 +12,7 @@ export default defineI18nConfig(() => ({
       years: 'ANOS',
       yearsLeading: 'ANOS LIDERANDO',
       millions: 'MILHÕES',
-      latam: 'LATAM & N. AMÉRICA',
+      latam: 'LATAM & AMÉRICA DO NORTE',
       allRightsReserved: 'Todos os direitos reservados.',
       seo: {
         title: 'Seidgy Amano | Consultor de Produto & Engenheiro de UX',
@@ -119,7 +119,7 @@ export default defineI18nConfig(() => ({
       about: {
         title: '05 / SOBRE',
         subtitle: 'POR QUE PAREI DE CRIAR APENAS INTERFACES.',
-        desc: 'Ao longo do tempo, percebi que o código e o design sozinhos não resolvem problemas reais de negócios. Se o produto errado for construído, a melhor engenharia do mundo não o salvará.',
+        desc: 'Ao longo do tempo, percebi que o código e o design sozinhos não resolvem problemas reais de negócios. Se o produto não for construído da maneira certa, a melhor engenharia do mundo não o salvará.',
         step1: {
           title: 'Por isso aprendi pesquisa.',
           desc: 'Para entender as reais dores dos usuários antes de desenhar qualquer tela, garantindo que estamos construindo o que é realmente necessário.'
@@ -261,7 +261,7 @@ export default defineI18nConfig(() => ({
           millions: 'Millions',
           ofUsers: 'OF USERS',
           impactedDesc: 'Impacted across the world',
-          latam: 'LATAM & N. AMERICA',
+          latam: 'LATAM & NORTH AMERICA',
           experience: 'EXPERIÊNCIA',
           culturesDesc: 'Across different cultures'
         }
@@ -285,7 +285,7 @@ export default defineI18nConfig(() => ({
       about: {
         title: '05 / ABOUT',
         subtitle: 'WHY I STOPPED BUILDING JUST INTERFACES.',
-        desc: 'Over time, I realized that code and design alone do not solve real business problems. If the wrong product is built, the best engineering in the world won\'t save it.',
+        desc: 'Over time, I realized that code and design alone do not solve real business problems. If the product isn`t built in the right way, the best engineering in the world won\'t save it.',
         step1: {
           title: 'That\'s why I learned research.',
           desc: 'To understand the real pain points of users before drawing any screens, ensuring we are building what is truly needed.'
