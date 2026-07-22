@@ -1,11 +1,17 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { playSound } from '../utils/sound'
 import Lenis from 'lenis'
 
 const { locale } = useI18n()
 
+const isDark = ref(true)
+const sharedIsDark = useState('isDark', () => true)
+
+watch(sharedIsDark, (newVal) => {
+  isDark.value = newVal
+}, { immediate: true })
 
 interface ParallaxItem {
   el: HTMLElement
@@ -59,6 +65,12 @@ const handleParallax = () => {
 }
 
 onMounted(() => {
+  // Load theme
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme === 'light') {
+    sharedIsDark.value = false
+    document.documentElement.classList.add('light-theme')
+  }
   nextTick(() => {
     // Initialize Lenis smooth momentum scroll
     lenisInstance = new Lenis({
@@ -292,12 +304,12 @@ onUnmounted(() => {
       <div class="trusted-by-container">
         <span class="trusted-title font-mono">{{ $t('trustedBy') }}</span>
         <div class="logo-list">
-          <img src="/images/harvard_logo.png" alt="Harvard" class="trusted-logo" @mouseenter="handleHover" />
-          <img src="/images/facebook_logo.png" alt="Facebook" class="trusted-logo" @mouseenter="handleHover" />
-          <img src="/images/unicef_logo.png" alt="UNICEF" class="trusted-logo" @mouseenter="handleHover" />
-          <img src="/images/nyu_logo.png" alt="NYU" class="trusted-logo" @mouseenter="handleHover" />
-          <img src="/images/bb_logo.png" alt="Banco do Brasil" class="trusted-logo" @mouseenter="handleHover" />
-          <img src="/images/stf_logo.png" alt="STF" class="trusted-logo" @mouseenter="handleHover" />
+          <img :src="`/images/harvard_logo${isDark ? '' : '-light'}.png`" alt="Harvard" class="trusted-logo" :class="{ 'trusted-logo--light': !isDark  }" @mouseenter="handleHover" />
+          <img :src=  "`/images/facebook_logo${isDark ? '' : '-light'}.png`" alt="Facebook" class="trusted-logo" :class="{ 'trusted-logo--light': !isDark  }" @mouseenter="handleHover" />
+          <img :src="`/images/unicef_logo${isDark ? '' : '-light'}.png`" alt="UNICEF" class="trusted-logo" :class="{ 'trusted-logo--light': !isDark  }" @mouseenter="handleHover" />
+          <img :src="`/images/nyu_logo${isDark ? '' : '-light'}.png`" alt="NYU" class="trusted-logo" :class="{ 'trusted-logo--light': !isDark  }" @mouseenter="handleHover" />
+          <img :src="`/images/bb_logo${isDark ? '' : '-light'}.png`" alt="Banco do Brasil" class="trusted-logo" :class="{ 'trusted-logo--light': !isDark  }" @mouseenter="handleHover" />
+          <img :src="`/images/stf_logo${isDark ? '' : '-light'}.png`" alt="STF" class="trusted-logo" :class="{ 'trusted-logo--light': !isDark  }" @mouseenter="handleHover" />
         </div>
       </div>
     </section>
@@ -346,7 +358,7 @@ onUnmounted(() => {
 
     <!-- 04 PLAYBOOKS SECTION -->
     <section id="playbooks" class="section-playbooks">
-      <div class="section-header">
+      <div class="section-header ">
         <span class="section-num font-mono">{{ $t('playbooks.title') }}</span>
         <h2 class="section-title">{{ $t('playbooks.subtitle') }}</h2>
       </div>
@@ -465,10 +477,10 @@ onUnmounted(() => {
         </div>
 
         <div class="contact-details">
-          <div class="detail-item">
+          <!--<div class="detail-item">
             <span class="lbl">{{ $t('contact.locationLabel') }}</span>
             <span class="val">{{ $t('contact.locationValue') }}</span>
-          </div>
+          </div>-->
           <div class="detail-item">
             <span class="lbl">{{ $t('contact.socialLabel') }}</span>
             <span class="val links">
@@ -484,6 +496,9 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss" scoped>
+.section-header {
+  margin-bottom: 30px;
+}
 .portfolio-page {
   padding: 0 var(--space-48);
   display: flex;
@@ -892,6 +907,10 @@ onUnmounted(() => {
     @include respond-to(mobile) {
       height: 22px;
     }
+  }
+
+  .trusted-logo--light {
+    filter: grayscale(0%) opacity(0.35);
   }
 }
 
@@ -1361,11 +1380,10 @@ onUnmounted(() => {
   border-top: 1px dotted var(--border-color);
   padding-top: var(--space-32);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--space-24);
 
   @include respond-to(mobile) {
-    grid-template-columns: 1fr;
     gap: var(--space-16);
   }
 

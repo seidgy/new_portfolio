@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { isSoundEnabled, playSound } from '../utils/sound'
 
 const { locale, locales, setLocale } = useI18n()
-const isDark = ref(true)
+const isDark = useState('isDark', () => true)
 const isMobileOpen = ref(false)
 
 const menuItems = [
