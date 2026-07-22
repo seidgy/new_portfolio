@@ -22,6 +22,17 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'title', content: 'Seidgy Amano | Product Consultant & UX Engineer' },
+        { name: 'description', content: 'Product Consultant combining systems-thinking with deep craft in design, UX research, strategy, and engineering to build high-impact digital products.' },
+        { name: 'og:title', content: 'Seidgy Amano | Product Consultant & UX Engineer' },
+        { name: 'og:description', content: 'Product Consultant combining systems-thinking with deep craft in design, UX research, strategy, and engineering to build high-impact digital products.' },
+        { name: 'og:image', content: '/images/og-share.jpg' },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:url', content: 'https://amano.solutions/' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: '/images/og-share.jpg' },
+        { name: 'twitter:title', content: 'Seidgy Amano | Product Consultant & UX Engineer' },
+        { name: 'twitter:description', content: 'Product Consultant combining systems-thinking with deep craft in design, UX research, strategy, and engineering to build high-impact digital products.' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
